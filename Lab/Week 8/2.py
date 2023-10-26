@@ -13,39 +13,31 @@ else:
 
 # 2a, X = 12.5
 Y, X = 15.0, 25.0
-if Y != (X - 10.0):
-    X = X - 10
-else:
-    X = X / 2.0
+if Y == X - 10.0:
+    X /= 2.0
 
+else:
+    X -= 10
 print(X)
 
 # 2b, X = 15.0
 Y = 10.0
 X = 25.0
-if Y != (X - 10.0):
-    X = X - 10
-else:
-    X = X / 2.0
+if Y == X - 10.0:
+    X /= 2.0
 
+else:
+    X -= 10
 print(X)
 
 # 2c, X = 30.0
 Y = 15.0
-if (Y < 15.0) and (Y >= 0.0):
-    X = 5 * Y
-else:
-    X = 2 * Y
-
+X = 5 * Y if (Y < 15.0) and (Y >= 0.0) else 2 * Y
 print(X)
 
 # 2d, X = 50.0
 Y = 10.0
-if (Y < 15.0) and (Y >= 0.0):
-    X = 5 * Y
-else:
-    X = 2 * Y
-
+X = 5 * Y if (Y < 15.0) and (Y >= 0.0) else 2 * Y
 print(X)
 
 # 2e, X = 144.0
@@ -75,10 +67,7 @@ Y = 67
 if (Y < 15.0) and (Y >= 0.0):
     X = 5 * Y
 elif Y > 20:
-    if Y < 30:
-        X = 4 * Y
-    else:
-        X = 0 * Y
+    X = 4 * Y if Y < 30 else 0 * Y
 else:
     X = 2 * Y
 

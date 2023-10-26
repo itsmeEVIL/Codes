@@ -1,17 +1,25 @@
 month = str(input("Enter the month name: ").lower())
 
-if month == "september" or month == "april" or month == "june" or month == "november":
+if month in {"september", "april", "june", "november"}:
     numDays = 30
 elif month == "february":
     leapYear = str(input("Is it a leap year?(Y/n)").lower())
-    if leapYear == "y" or leapYear == "yes":
+    if leapYear in {"y", "yes"}:
         numDays = 29
-    elif leapYear == "n" or leapYear == "no":
+    elif leapYear in {"n", "no"}:
         numDays = 28
     else:
         print("Not a valid answer.")
         exit()
-elif month == "january" or month == "march" or month == "may" or month == "july" or month == "august" or month == "october" or month == "december":
+elif month in {
+    "january",
+    "march",
+    "may",
+    "july",
+    "august",
+    "october",
+    "december",
+}:
     numDays = 31
 else:
     print("Not a valid month.")

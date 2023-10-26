@@ -23,4 +23,4 @@ print(math.sqrt(math.sqrt(n)))
 print(s + t)
 
 # f
-print(s + "is sweet as" + " " + t)
+print(f"{s}is sweet as {t}")
